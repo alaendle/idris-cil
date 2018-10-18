@@ -19,10 +19,11 @@ addons:
       - mono-utils
 
 before_install:
-  - sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-  - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
+  - wget -q https://packages.microsoft.com/config/ubuntu/14.04/packages-microsoft-prod.deb
+  - sudo dpkg -i packages-microsoft-prod.deb
+  - sudo apt-get install apt-transport-https
   - sudo apt-get update -qq
-  - sudo apt-get install -qq dotnet-dev-1.0.0-preview2.1-003177
+  - sudo apt-get install -qq dotnet-sdk-2.1
   # Add ghc to the PATH
   - export PATH=/opt/ghc/bin:$PATH
   # Download and unpack the stack executable
