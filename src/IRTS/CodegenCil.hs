@@ -79,7 +79,7 @@ codegenCilTrans assemblyTransformation cci@(ci, _) =
                               \  \"runtimeOptions\": {\n\
                               \    \"framework\": {\n\
                               \      \"name\": \"Microsoft.NETCore.App\",\n\
-                              \      \"version\": \"1.1.0\"\n\
+                              \      \"version\": \"2.1.5\"\n\
                               \    }\n\
                               \  }\n\
                               \}"
